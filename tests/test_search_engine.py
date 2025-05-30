@@ -34,3 +34,11 @@ def test_case_insentive_search():
 
     result = search(docs, 'Shoot')
     assert result == ['doc1', 'doc2']
+
+
+def test_punctuation_insentive_search():
+    doc1 = {'id': 'doc1', 'text': "I can't shoot straight unless I've had a pint!"}
+    docs = [doc1]
+
+    assert search(docs, 'pint') == ['doc1']
+    assert search(docs, 'pint!') == ['doc1']

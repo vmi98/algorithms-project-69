@@ -1,11 +1,21 @@
 import re
 
 
+def clean_word(w):
+    return ''.join(re.findall(r'\w+', w)).lower()
+
+
 def search(docs, word):
     if not docs or not word:
         return []
-    docs_found = [
-        doc['id'] for doc in docs
-        if word.lower() in re.findall(r'\w+', doc['text'].lower())
-    ]
+
+    term_word = clean_word(word)
+    docs_found = []
+    for doc in docs:
+        tokens = [
+            clean_word(t)
+            for t in re.findall(r'\w+', doc['text'].lower())
+        ]
+        if term_word in tokens:
+            docs_found.append(doc['id'])
     return docs_found

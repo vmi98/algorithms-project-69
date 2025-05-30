@@ -17,5 +17,15 @@ def search(docs, word):
             for t in re.findall(r'\w+', doc['text'].lower())
         ]
         if term_word in tokens:
-            docs_found.append(doc['id'])
-    return docs_found
+            docs_found.append(
+                {'doc_id': doc['id'],
+                 'word_repeat': tokens.count(term_word)}
+            )
+    sorted_docs_found = sorted(
+        docs_found,
+        key=lambda x: x['word_repeat'],
+        reverse=True
+    )
+    relevant_docs = list(map(lambda doc: doc['doc_id'], sorted_docs_found))
+    return relevant_docs
+

@@ -35,7 +35,7 @@ def TF_IDF(index, docs, words):
         acc = []
         for word in words:
             TF = doc['text'].count(word) / len(doc)
-            IDF = math.log(len(docs) / len(index[word]))
+            IDF = math.log2(1 + ((len(docs)) - len(index[word]) + 1)) / (len(index[word]) + 0.5)
             TF_IDF = TF*IDF
             acc.append(TF_IDF)
         result.append({'id': doc['id'], 'weight': sum(acc)})

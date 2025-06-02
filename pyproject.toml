@@ -18,3 +18,9 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["search_engine"]
+
+[tool.poetry]
+name = "algorithms-project-69"
+version = "0.1.0"
+description = "description"
+authors = ["<vladaa@gmail.com>"]

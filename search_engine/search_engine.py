@@ -1,5 +1,5 @@
-import re
 import math
+import re
 from collections import defaultdict
 
 
@@ -41,7 +41,7 @@ def TF_IDF(index, docs, words):
             fraction = numerator / denominator
 
             idf = math.log2(1 + fraction)
-            tf_idf = tf*idf
+            tf_idf = tf * idf
             acc.append(tf_idf)
         result.append({'id': doc['id'], 'weight': sum(acc)})
     return result

@@ -12,9 +12,9 @@ def test_correct_doc_search():
     doc3 = "I'm your shooter."
 
     docs = [
-      {'id': 'doc1', 'text': doc1},
-      {'id': 'doc2', 'text': doc2},
-      {'id': 'doc3', 'text': doc3},
+        {'id': 'doc1', 'text': doc1},
+        {'id': 'doc2', 'text': doc2},
+        {'id': 'doc3', 'text': doc3},
     ]
 
     result = search(docs, 'shoot')
@@ -27,9 +27,9 @@ def test_case_insentive_search():
     doc3 = "I'm your shooter."
 
     docs = [
-      {'id': 'doc1', 'text': doc1},
-      {'id': 'doc2', 'text': doc2},
-      {'id': 'doc3', 'text': doc3},
+        {'id': 'doc1', 'text': doc1},
+        {'id': 'doc2', 'text': doc2},
+        {'id': 'doc3', 'text': doc3},
     ]
 
     result = search(docs, 'Shoot')

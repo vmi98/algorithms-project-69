@@ -1,6 +1,6 @@
 ## Search engine 
 
-The project is part of Hexlet course assignments. TIt implements a simple search engine that can perform searches on a collection of documents. The search engine supports text preprocessing to handle punctuation and case insensitivity and uses the TF-IDF metric to rank search results by relevance.
+The project is part of Hexlet course assignments. It implements a simple search engine that can perform searches on a collection of documents. The search engine supports text preprocessing to handle punctuation and case insensitivity and uses the TF-IDF metric to rank search results by relevance.
 
 
 ### Hexlet tests and linter status:
@@ -8,10 +8,10 @@ The project is part of Hexlet course assignments. TIt implements a simple search
 
 ## Features
 
-Exact Search: Search for documents containing a specific term.
-Fuzzy Search: Search for documents containing any of the terms in the query.
-Text Preprocessing: Convert text to lowercase and remove punctuation to ensure accurate search results.
-Relevance Ranking: Use TF-IDF (Term Frequency-Inverse Document Frequency) to rank documents by relevance.
+- Exact Search: Search for documents containing a specific term.
+- Fuzzy Search: Search for documents containing any of the terms in the query.
+- Text Preprocessing: Convert text to lowercase and remove punctuation to ensure accurate search results.
+- Relevance Ranking: Use TF-IDF (Term Frequency-Inverse Document Frequency) to rank documents by relevance.
 
 ## Tech Stack
 
